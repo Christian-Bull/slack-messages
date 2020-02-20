@@ -6,8 +6,6 @@ import slack
 @slack.RTMClient.run_on(event='message')
 def store(**payload):
     data = payload['data']
-    web_client = payload['web_client']
-    rtm_client = payload['rtm_client']
 
     # this pretty prints the output
     # j = json.dumps(data, sort_keys=True, indent=4, separators=(',', ':'))
